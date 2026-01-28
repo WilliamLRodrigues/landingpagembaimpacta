@@ -10,7 +10,6 @@
     :root{
       --bg:#070A12;
       --surface:rgba(255,255,255,.06);
-      --surface2:rgba(255,255,255,.10);
       --text:#F3F6FF;
       --muted:rgba(243,246,255,.72);
       --muted2:rgba(243,246,255,.55);
@@ -32,7 +31,6 @@
       --h1:36px;
       --h2:22px;
       --p:16px;
-      --small:13px;
 
       --tap:44px;
     }
@@ -60,7 +58,6 @@
       padding:0 var(--pad);
     }
 
-    /* Header minimalista (LP: sem menu) */
     header{
       position:sticky;
       top:0;
@@ -138,11 +135,11 @@
       background:linear-gradient(135deg,rgba(76,190,255,.95),rgba(39,209,139,.95));
     }
 
-    main{padding-bottom:84px} /* espaço para sticky CTA */
+    main{padding-bottom:84px}
     section{padding:34px 0}
 
     .card{
-      background:var(--surface);
+      background:rgba(255,255,255,.06);
       border:1px solid rgba(243,246,255,.12);
       border-radius:var(--radius2);
       box-shadow:var(--shadow2);
@@ -164,7 +161,7 @@
       contain-intrinsic-size:1px 900px;
     }
 
-    /* HERO V2: mais específico + microcopy de risco */
+    /* HERO */
     .hero{padding-top:22px}
     .hero-wrap{
       display:flex;
@@ -261,7 +258,7 @@
       opacity:.9;
     }
 
-    /* Mock visual leve */
+    /* Mock visual */
     .mock{
       border-radius:22px;
       border:1px solid rgba(243,246,255,.12);
@@ -309,7 +306,7 @@
     }
     .mock-badge b{color:var(--text)}
     .mock-bg:after{
-      content:"Status ao vivo • Rota com paradas • Pagamento no app";
+      content:"Disponível • Ocupado • Indisponível • Rotas com paradas • Pagamento no app";
       position:absolute;
       left:12px;right:12px;bottom:12px;
       padding:10px 12px;
@@ -324,9 +321,8 @@
       pointer-events:none;
       text-align:center;
     }
-    .hint{font-size:12px;color:var(--muted2);margin-top:8px}
 
-    /* BENEFÍCIOS V2: resultado + microtexto */
+    /* BENEFÍCIOS */
     .grid3{display:flex;flex-direction:column;gap:12px}
     .item{
       padding:16px;
@@ -363,7 +359,7 @@
       width:fit-content;
     }
 
-    /* PROVA SOCIAL V2: números + logos + 1 depoimento curto + selos */
+    /* PROVA SOCIAL */
     .proof{padding:18px}
     .metrics{
       display:flex;
@@ -383,6 +379,21 @@
     }
     .metric b{font-size:18px;color:var(--text)}
     .metric span{display:block;color:var(--muted2);font-size:13px;margin-top:2px}
+
+    .tagmini{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(7,10,18,.42);
+      border:1px solid rgba(243,246,255,.14);
+      font-size:13px;
+      color:rgba(243,246,255,.86);
+      width:fit-content;
+      font-weight:900;
+    }
+    .tagmini .dot{width:8px;height:8px;box-shadow:0 0 0 6px rgba(39,209,139,.12);margin-top:0}
 
     .logos{
       display:flex;
@@ -431,7 +442,7 @@
     .quote p{color:var(--text);font-size:15px}
     .quote small{color:var(--muted2);display:block;margin-top:8px}
 
-    /* COMO FUNCIONA V2: verbo + resultado */
+    /* COMO FUNCIONA */
     .steps{display:flex;flex-direction:column;gap:12px}
     .step{
       display:flex;
@@ -451,7 +462,7 @@
     .step h3{margin:0 0 4px 0;font-size:16px}
     .step p{margin:0;font-size:14px}
 
-    /* OFERTA E DIFERENCIAIS V2: o que inclui + por que é único */
+    /* OFERTA */
     .offer{padding:18px}
     .offerbox{
       padding:16px;
@@ -462,20 +473,6 @@
       flex-direction:column;
       gap:12px;
     }
-    .tagmini{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      background:rgba(7,10,18,.42);
-      border:1px solid rgba(243,246,255,.14);
-      font-size:13px;
-      color:rgba(243,246,255,.86);
-      width:fit-content;
-      font-weight:900;
-    }
-    .tagmini .dot{width:8px;height:8px;box-shadow:0 0 0 6px rgba(39,209,139,.12);margin-top:0}
     .split{
       display:flex;
       flex-direction:column;
@@ -515,7 +512,7 @@
       transform:rotate(-45deg);
     }
 
-    /* PLANOS V2: ancoragem + clareza do teste */
+    /* PLANOS */
     .pricing{display:flex;flex-direction:column;gap:12px}
     .plan{
       padding:18px;
@@ -563,7 +560,7 @@
     }
     .plan .btn{width:100%;margin-top:14px}
 
-    /* FAQ V2: 8 perguntas reais */
+    /* FAQ */
     .faq{display:flex;flex-direction:column;gap:10px}
     details{
       border-radius:18px;
@@ -607,7 +604,7 @@
       font-size:14px;
     }
 
-    /* GARANTIAS V2: segurança/políticas-chave */
+    /* GARANTIAS */
     .guarantee{
       padding:18px;
       display:flex;
@@ -626,7 +623,7 @@
     .policy b{display:block;margin-bottom:3px}
     .policy p{font-size:14px;color:var(--muted);margin:0}
 
-    /* FORM V2: 2 etapas (menos fricção) */
+    /* FORM */
     form{
       display:flex;
       flex-direction:column;
@@ -692,17 +689,6 @@
       width:20px;height:20px;min-height:20px;
       margin-top:2px;
     }
-    .toast{
-      display:none;
-      margin-top:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(39,209,139,.28);
-      background:rgba(39,209,139,.10);
-      color:rgba(243,246,255,.92);
-      font-weight:900;
-      font-size:13px;
-    }
 
     /* CTA FINAL */
     .final{
@@ -724,7 +710,7 @@
     }
     .final > *{position:relative;z-index:1}
 
-    /* Footer essencial + confiança */
+    /* Footer */
     footer{
       border-top:1px solid rgba(243,246,255,.08);
       padding:22px 0;
@@ -746,7 +732,7 @@
     }
     .foot a:hover{color:var(--text);border-bottom-color:rgba(243,246,255,.40)}
 
-    /* Sticky CTA (mobile) */
+    /* Sticky CTA */
     .sticky{
       position:fixed;
       left:0;right:0;bottom:0;
@@ -783,6 +769,61 @@
       text-overflow:ellipsis;
     }
 
+    /* Modal legal */
+    .modal{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:rgba(0,0,0,.55);
+      z-index:80;
+    }
+    .modal[aria-hidden="false"]{display:flex}
+    .modal-card{
+      width:100%;
+      max-width:760px;
+      border-radius:22px;
+      border:1px solid rgba(243,246,255,.14);
+      background:rgba(7,10,18,.92);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .modal-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:14px 16px;
+      border-bottom:1px solid rgba(243,246,255,.10);
+    }
+    .modal-head b{font-size:14px;letter-spacing:.2px}
+    .modal-close{
+      min-height:40px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(243,246,255,.14);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:900;
+      cursor:pointer;
+    }
+    .modal-close:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+    .modal-body{
+      padding:16px;
+      color:rgba(243,246,255,.78);
+      font-size:14px;
+      max-height:70vh;
+      overflow:auto;
+    }
+    .modal-body h3{
+      margin:14px 0 8px 0;
+      font-size:15px;
+      color:rgba(243,246,255,.92);
+    }
+    .modal-body p{margin:0 0 10px 0;color:rgba(243,246,255,.75);font-size:14px}
+
     @media (min-width: 768px){
       :root{--h1:54px;--h2:26px;--p:17px}
       .hero-wrap{
@@ -808,7 +849,6 @@
 
       .foot{flex-direction:row;align-items:center;width:100%}
 
-      /* Sticky some no desktop */
       .sticky{display:none}
       main{padding-bottom:28px}
     }
@@ -824,8 +864,8 @@
 <body>
   <header>
     <div class="container">
-      <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="#topo" aria-label="Voltar ao topo">
+      <nav class="nav" aria-label="Navegação">
+        <a class="brand" href="#topo" aria-label="VoltWay">
           <div class="logo" aria-hidden="true"></div>
           <div>
             <strong>VoltWay</strong>
@@ -833,7 +873,7 @@
           </div>
         </a>
 
-        <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis do VoltWay">
+        <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis">
           Ativar teste grátis →
         </a>
       </nav>
@@ -853,29 +893,28 @@
               sugere <b>rota com paradas</b> e centraliza <b>pagamento no app</b>.
             </p>
 
-            <div class="bullets" aria-label="Destaques principais">
+            <div class="bullets" aria-label="Destaques">
               <div class="bullet"><span class="dot" aria-hidden="true"></span><span><b>Evite tempo perdido:</b> veja status antes de sair.</span></div>
-              <div class="bullet"><span class="dot" aria-hidden="true"></span><span><b>Reduza ansiedade de autonomia:</b> rota com paradas.</span></div>
-              <div class="bullet"><span class="dot" aria-hidden="true"></span><span><b>Menos fricção:</b> tudo em um único app.</span></div>
+              <div class="bullet"><span class="dot" aria-hidden="true"></span><span><b>Menos ansiedade:</b> autonomia planejada na cidade e na estrada.</span></div>
+              <div class="bullet"><span class="dot" aria-hidden="true"></span><span><b>Um app só:</b> localização, rota e pagamento no mesmo lugar.</span></div>
             </div>
 
             <div class="hero-actions">
               <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
-              <div class="microcopy" aria-label="Condições do teste">
-                <span class="mini-icon" aria-hidden="true"></span> Teste grátis • sem burocracia
+              <div class="microcopy" aria-label="Mensagem curta">
+                <span class="mini-icon" aria-hidden="true"></span> Praticidade, sem dor de cabeça
               </div>
             </div>
           </div>
 
-          <div class="hero-right">
-            <div class="mock" aria-label="Prévia ilustrativa do VoltWay">
+          <div class="hero-right" aria-label="Prévia do app">
+            <div class="mock">
               <div class="mock-inner">
                 <div class="mock-bg" aria-hidden="true">
                   <div class="mock-badge"><b>Ao vivo:</b> disponível / ocupado / indisponível</div>
                 </div>
               </div>
             </div>
-            <p class="hint">*Landing page de campanha: sem menu, uma única ação e CTA repetido (CRO).</p>
           </div>
         </div>
       </div>
@@ -886,8 +925,8 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Benefícios (ganho inequívoco)</h2>
-            <p>Resultado direto para quem depende do carro todos os dias.</p>
+            <h2>Benefícios</h2>
+            <p>Resultado direto para quem depende do carro no dia a dia.</p>
           </div>
         </div>
 
@@ -906,14 +945,14 @@
           </div>
           <div class="item">
             <div class="icon" aria-hidden="true"></div>
-            <h3>Um app só</h3>
-            <p>Pagamento integrado e histórico de uso, sem alternar entre apps e cadastros.</p>
+            <h3>Centralize tudo</h3>
+            <p>Pagamento integrado e histórico de uso, sem alternar entre apps e métodos de pagamento.</p>
             <div class="micro">Mais praticidade</div>
           </div>
         </div>
 
         <div style="margin-top:14px">
-          <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis após ver benefícios">Ativar teste grátis →</a>
+          <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
         </div>
       </div>
     </section>
@@ -923,45 +962,45 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Prova social (menos risco percebido)</h2>
-            <p>Números + logos + 1 depoimento curto (exemplos realistas).</p>
+            <h2>Confiança</h2>
+            <p>Recarga mais previsível com informações atualizadas.</p>
           </div>
         </div>
 
-        <div class="card proof">
-          <div class="metrics" aria-label="Métricas de prova social">
+        <div class="card proof" aria-label="Confiança e prova social">
+          <div class="metrics">
             <div class="metric">
               <div>
-                <b>4,8 ★</b>
-                <span>média de avaliações (exemplo)</span>
+                <b>Alta avaliação</b>
+                <span>experiência simples e rápida</span>
               </div>
               <div class="tagmini"><span class="dot" aria-hidden="true"></span> Bem avaliado</div>
             </div>
             <div class="metric">
               <div>
-                <b>120k+</b>
-                <span>motoristas EV ativos (exemplo)</span>
+                <b>Uso recorrente</b>
+                <span>feito para rotina e compromissos</span>
               </div>
-              <div class="tagmini"><span class="dot" aria-hidden="true"></span> Alta adoção</div>
+              <div class="tagmini"><span class="dot" aria-hidden="true"></span> Uso diário</div>
             </div>
             <div class="metric">
               <div>
-                <b>-32%</b>
-                <span>tempo procurando recarga (exemplo)</span>
+                <b>Menos estresse</b>
+                <span>reduz imprevistos na recarga</span>
               </div>
-              <div class="tagmini"><span class="dot" aria-hidden="true"></span> Mais tempo livre</div>
+              <div class="tagmini"><span class="dot" aria-hidden="true"></span> Mais calma</div>
             </div>
           </div>
 
-          <div class="logos" aria-label="Logos (placeholders)">
-            <div class="logo-pill">Rede EV Alpha</div>
-            <div class="logo-pill">ChargeNet</div>
-            <div class="logo-pill">E-Station</div>
-            <div class="logo-pill">AutoHub</div>
-            <div class="logo-pill">Mobility+</div>
+          <div class="logos" aria-label="Redes compatíveis (exibição ilustrativa)">
+            <div class="logo-pill">Rede Compatível</div>
+            <div class="logo-pill">Recarga+</div>
+            <div class="logo-pill">EV Station</div>
+            <div class="logo-pill">ChargeHub</div>
+            <div class="logo-pill">Mobility</div>
           </div>
 
-          <div class="seals" aria-label="Selos de confiança (placeholders)">
+          <div class="seals" aria-label="Selos">
             <div class="seal"><span class="dot" aria-hidden="true"></span> Dados em tempo real</div>
             <div class="seal"><span class="dot" aria-hidden="true"></span> Cancelamento simples</div>
             <div class="seal"><span class="dot" aria-hidden="true"></span> Privacidade por padrão</div>
@@ -969,11 +1008,11 @@
 
           <div class="quote" aria-label="Depoimento">
             <p>“Agora eu vejo o que está disponível e sigo a rota planejada. Parei de abrir vários apps.”</p>
-            <small>— Ricardo, SP (uso diário, compromissos críticos)</small>
+            <small>— Usuário VoltWay</small>
           </div>
 
           <div style="margin-top:14px">
-            <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis após prova social">Ativar teste grátis →</a>
+            <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
           </div>
         </div>
       </div>
@@ -984,16 +1023,16 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Como funciona (1-2-3 até o valor)</h2>
-            <p>Fluxo direto: abrir → confirmar → ir.</p>
+            <h2>Como funciona</h2>
+            <p>Abra, confirme e siga para recarregar.</p>
           </div>
         </div>
 
-        <div class="steps" aria-label="Passos do VoltWay">
+        <div class="steps" aria-label="Como funciona">
           <div class="step">
             <div class="num" aria-hidden="true">1</div>
             <div>
-              <h3>Abra e confirme o status</h3>
+              <h3>Encontre e confira o status</h3>
               <p>Disponível/ocupado/indisponível — antes de você sair.</p>
             </div>
           </div>
@@ -1002,7 +1041,7 @@
             <div class="num" aria-hidden="true">2</div>
             <div>
               <h3>Planeje a rota com paradas</h3>
-              <p>Menos ansiedade de autonomia, mais previsibilidade.</p>
+              <p>Menos ansiedade de autonomia e mais previsibilidade.</p>
             </div>
           </div>
 
@@ -1010,13 +1049,13 @@
             <div class="num" aria-hidden="true">3</div>
             <div>
               <h3>Recarregue e pague no app</h3>
-              <p>Sem alternar apps, com histórico para você acompanhar.</p>
+              <p>Um único app para recarga e histórico de uso.</p>
             </div>
           </div>
         </div>
 
         <div style="margin-top:14px">
-          <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis após como funciona">Ativar teste grátis →</a>
+          <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
         </div>
       </div>
     </section>
@@ -1026,19 +1065,19 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Oferta e diferenciais (justificar escolha)</h2>
-            <p>O que está incluso + o que é único no VoltWay.</p>
+            <h2>O que você recebe</h2>
+            <p>Tudo o que você precisa para recarregar com tranquilidade.</p>
           </div>
         </div>
 
-        <div class="card offer">
+        <div class="card offer" aria-label="Oferta e diferenciais">
           <div class="offerbox">
-            <div class="tagmini"><span class="dot" aria-hidden="true"></span> Oferta: teste grátis</div>
-            <p><b>Teste grátis</b> para você validar no seu dia a dia (trabalho, família, compromissos). Se não fizer sentido, você cancela sem burocracia.</p>
+            <div class="tagmini"><span class="dot" aria-hidden="true"></span> Teste grátis</div>
+            <p><b>Ative o teste grátis</b> e valide na sua rotina (trabalho, família e compromissos). Se não fizer sentido, você cancela com facilidade.</p>
 
-            <div class="split" aria-label="Inclui e diferenciais">
+            <div class="split">
               <div class="panel">
-                <h3>O que está incluso</h3>
+                <h3>Inclui</h3>
                 <ul>
                   <li><span class="check" aria-hidden="true"></span>Status ao vivo (disponível/ocupado)</li>
                   <li><span class="check" aria-hidden="true"></span>Rota com paradas de recarga</li>
@@ -1047,58 +1086,56 @@
                 </ul>
               </div>
               <div class="panel">
-                <h3>Por que não é “só mais um app”</h3>
+                <h3>Diferenciais</h3>
                 <ul>
-                  <li><span class="check" aria-hidden="true"></span>Centraliza redes e reduz fricção</li>
-                  <li><span class="check" aria-hidden="true"></span>Prioriza pontos mais confiáveis</li>
-                  <li><span class="check" aria-hidden="true"></span>Feito para rotina e compromissos críticos</li>
+                  <li><span class="check" aria-hidden="true"></span>Menos apps, menos fricção</li>
+                  <li><span class="check" aria-hidden="true"></span>Foco em pontos mais confiáveis</li>
+                  <li><span class="check" aria-hidden="true"></span>Feito para uso diário</li>
                   <li><span class="check" aria-hidden="true"></span>Decisão rápida: ver → ir → pagar</li>
                 </ul>
               </div>
             </div>
 
-            <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis na seção de conversão">Ativar teste grátis →</a>
+            <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 6. Planos e preços -->
-    <section class="below">
+    <section class="below" id="planos">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Plano e preço (decisão simples)</h2>
-            <p>Um plano para uso diário, com ancoragem e clareza.</p>
+            <h2>Planos</h2>
+            <p>Escolha o plano ideal para sua rotina.</p>
           </div>
         </div>
 
-        <div class="pricing" aria-label="Plano">
+        <div class="pricing" aria-label="Planos">
           <div class="plan plan--featured">
-            <div class="tag">Recomendado</div>
+            <div class="tag">Mais escolhido</div>
             <h3>VoltWay Plus</h3>
-            <p>Previsibilidade total para quem não pode “ficar na mão”.</p>
-            <div class="price">R$ 19,90 <small>/ mês (exemplo)</small></div>
+            <p>Previsibilidade total para quem não pode ficar na mão.</p>
+            <div class="price">R$ 19,90 <small>/ mês</small></div>
 
             <div class="fineprint">
-              Teste grátis agora. Após o período de teste, o plano pode ser renovado automaticamente (exemplo). Você pode cancelar a qualquer momento.
+              Teste grátis disponível. Cancelamento simples a qualquer momento.
             </div>
 
-            <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis do plano recomendado">Começar com previsibilidade →</a>
+            <a class="btn btn--primary" href="#conversao">Começar agora →</a>
           </div>
         </div>
-
-        <p class="hint">*Ajuste preço/termos conforme seu produto real.</p>
       </div>
     </section>
 
-    <!-- 7. FAQ (8 perguntas) -->
-    <section class="below">
+    <!-- 7. FAQ -->
+    <section class="below" id="faq">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>FAQ de objeções</h2>
-            <p>Respostas curtas para remover barreiras finais.</p>
+            <h2>Perguntas frequentes</h2>
+            <p>Respostas rápidas antes de você começar.</p>
           </div>
         </div>
 
@@ -1106,62 +1143,62 @@
           <details>
             <summary>Os dados são confiáveis mesmo? <span class="chev" aria-hidden="true"></span></summary>
             <div class="content">
-              A proposta é reduzir o “chegar e descobrir”. O app prioriza pontos com melhor histórico e sinais de atualização frequente.
+              O VoltWay prioriza informações atualizadas e ajuda você a decidir antes de sair, reduzindo imprevistos.
             </div>
           </details>
 
           <details>
-            <summary>Funciona fora da capital (estrada/interior)? <span class="chev" aria-hidden="true"></span></summary>
+            <summary>Funciona fora da capital? <span class="chev" aria-hidden="true"></span></summary>
             <div class="content">
-              A cobertura evolui continuamente. Para viagens, o foco é planejamento com paradas e filtros por confiabilidade.
+              A cobertura varia por região. Para viagens, o app ajuda a planejar paradas e alternativas ao longo do trajeto.
             </div>
           </details>
 
           <details>
             <summary>Isso vai complicar meu dia a dia? <span class="chev" aria-hidden="true"></span></summary>
             <div class="content">
-              Pelo contrário: é um fluxo único (ver status → planejar → pagar). Menos passos do que alternar vários apps.
-            </div>
-          </details>
-
-          <details>
-            <summary>Preciso cadastrar cartão no teste grátis? <span class="chev" aria-hidden="true"></span></summary>
-            <div class="content">
-              Depende da implementação. Nesta landing page, a intenção é “baixo risco”: você pode optar por teste sem cartão.
-            </div>
-          </details>
-
-          <details>
-            <summary>E se eu chegar e o ponto ficar ocupado? <span class="chev" aria-hidden="true"></span></summary>
-            <div class="content">
-              Você consegue ver alternativas próximas e ajustar a rota rapidamente, reduzindo o estresse de última hora.
-            </div>
-          </details>
-
-          <details>
-            <summary>Por que usar o VoltWay se já existem apps de rede? <span class="chev" aria-hidden="true"></span></summary>
-            <div class="content">
-              Porque centraliza o essencial: descoberta + status ao vivo + rota + pagamento — sem alternar apps e cadastros.
+              A proposta é simplificar: status, rota e pagamento em um único app.
             </div>
           </details>
 
           <details>
             <summary>Posso cancelar quando quiser? <span class="chev" aria-hidden="true"></span></summary>
             <div class="content">
-              Sim. A ideia é transparência: você testa na rotina e cancela sem burocracia se não fizer sentido.
+              Sim. Você controla sua assinatura e pode cancelar com facilidade.
             </div>
           </details>
 
           <details>
-            <summary>Como vocês definem “ponto confiável”? <span class="chev" aria-hidden="true"></span></summary>
+            <summary>Por que usar o VoltWay se já existem apps de rede? <span class="chev" aria-hidden="true"></span></summary>
             <div class="content">
-              Por sinais como disponibilidade consistente, baixa taxa de falhas e atualização mais frequente (conceito a ser validado no produto real).
+              Para centralizar a experiência: encontrar, confirmar disponibilidade, planejar rota e pagar sem alternar apps.
+            </div>
+          </details>
+
+          <details>
+            <summary>O que significa “ponto confiável”? <span class="chev" aria-hidden="true"></span></summary>
+            <div class="content">
+              Pontos com melhor histórico de funcionamento e experiência, para reduzir chances de você perder tempo.
+            </div>
+          </details>
+
+          <details>
+            <summary>Preciso colocar cartão para testar? <span class="chev" aria-hidden="true"></span></summary>
+            <div class="content">
+              Você pode começar com o teste grátis e concluir a ativação conforme a política do plano.
+            </div>
+          </details>
+
+          <details>
+            <summary>E se o ponto ficar ocupado quando eu chegar? <span class="chev" aria-hidden="true"></span></summary>
+            <div class="content">
+              O app ajuda com alternativas próximas e ajuste rápido de rota, reduzindo estresse de última hora.
             </div>
           </details>
         </div>
 
         <div style="margin-top:14px">
-          <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis após FAQ">Ativar teste grátis →</a>
+          <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
         </div>
       </div>
     </section>
@@ -1171,59 +1208,58 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Garantias e segurança</h2>
-            <p>Reduzindo risco e aumentando confiança.</p>
+            <h2>Segurança e transparência</h2>
+            <p>Mais confiança para você usar no dia a dia.</p>
           </div>
         </div>
 
-        <div class="card guarantee" aria-label="Garantias">
+        <div class="card guarantee" aria-label="Segurança e transparência">
           <div class="policy">
             <div class="icon" aria-hidden="true"></div>
             <div>
-              <b>Teste grátis para validar na rotina</b>
-              <p>Você sente o ganho de previsibilidade antes de pagar.</p>
+              <b>Teste grátis</b>
+              <p>Valide o ganho de previsibilidade antes de decidir.</p>
             </div>
           </div>
           <div class="policy">
             <div class="icon" aria-hidden="true"></div>
             <div>
               <b>Cancelamento simples</b>
-              <p>Sem burocracia para manter transparência e confiança.</p>
+              <p>Controle total para manter transparência e confiança.</p>
             </div>
           </div>
           <div class="policy">
             <div class="icon" aria-hidden="true"></div>
             <div>
               <b>Privacidade por padrão</b>
-              <p>Coletamos o mínimo necessário para operar e melhorar a experiência.</p>
+              <p>Coletamos o mínimo necessário para entregar a melhor experiência.</p>
             </div>
           </div>
         </div>
 
         <div style="margin-top:14px">
-          <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis após garantias">Ativar teste grátis →</a>
+          <a class="btn btn--primary" href="#conversao">Ativar teste grátis →</a>
         </div>
       </div>
     </section>
 
-    <!-- 9. Formulário (2 etapas) -->
+    <!-- 9. Formulário / CTA conversão -->
     <section id="conversao" class="below">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>Ative o teste grátis</h2>
-            <p>Etapa 1: seu e-mail. Etapa 2: detalhes (opcional).</p>
+            <p>Receba o acesso e comece a usar hoje.</p>
           </div>
         </div>
 
         <div class="card">
           <form id="leadForm" novalidate>
-            <div class="form-steps" aria-label="Etapas do formulário">
+            <div class="form-steps" aria-label="Etapas">
               <div class="pill pill--active" id="pill1">1) E-mail</div>
-              <div class="pill" id="pill2">2) Detalhes</div>
+              <div class="pill" id="pill2">2) Finalizar</div>
             </div>
 
-            <!-- Step 1 -->
             <div id="step1">
               <div class="row">
                 <div>
@@ -1232,49 +1268,48 @@
                 </div>
               </div>
 
-              <button class="btn btn--primary" type="button" id="goStep2" aria-label="Continuar para a etapa 2">
+              <button class="btn btn--primary" type="button" id="goStep2" aria-label="Continuar">
                 Continuar →
               </button>
 
-              <div class="hint" style="margin-top:10px">
-                Você pode finalizar só com o e-mail. Detalhes ajudam a personalizar o onboarding.
+              <div class="microcopy" style="margin-top:10px">
+                <span class="mini-icon" aria-hidden="true"></span> Sem spam • foco no onboarding
               </div>
             </div>
 
-            <!-- Step 2 -->
             <div id="step2" style="display:none">
               <div class="row">
                 <div>
                   <label for="nome">Nome (opcional)</label>
-                  <input id="nome" name="nome" type="text" placeholder="Ex.: Ricardo Moreira" autocomplete="name" />
+                  <input id="nome" name="nome" type="text" placeholder="Ex.: Ricardo" autocomplete="name" />
                 </div>
                 <div>
                   <label for="uso">Uso principal</label>
-                  <select id="uso" name="uso" aria-label="Selecione seu uso principal">
-                    <option value="diario" selected>Uso diário (trabalho/família)</option>
-                    <option value="viagens">Viagens frequentes (estrada)</option>
+                  <select id="uso" name="uso" aria-label="Uso principal">
+                    <option value="diario" selected>Uso diário</option>
+                    <option value="viagens">Viagens/estrada</option>
                     <option value="misto">Misto</option>
                   </select>
                 </div>
               </div>
 
               <div class="lgpd">
-                <input id="lgpd" name="lgpd" type="checkbox" required aria-label="Concordo com a política de privacidade" />
+                <input id="lgpd" name="lgpd" type="checkbox" required aria-label="Concordo com a Política de Privacidade" />
                 <div>
-                  <label for="lgpd" style="margin:0;color:var(--text);font-weight:900">Concordo em receber o acesso ao teste grátis.</label>
-                  <div class="hint">Ao enviar, você concorda com nossa política de privacidade e comunicações de onboarding.</div>
+                  <label for="lgpd" style="margin:0;color:var(--text);font-weight:900">Concordo com a Política de Privacidade e Termos.</label>
+                  <div style="color:var(--muted2);font-size:12px;margin-top:4px">
+                    Você pode cancelar comunicações a qualquer momento.
+                  </div>
                 </div>
               </div>
 
-              <button class="btn btn--primary" type="submit" aria-label="Enviar cadastro para ativar teste grátis">
+              <button class="btn btn--primary" type="submit" aria-label="Ativar teste grátis">
                 Ativar teste grátis →
               </button>
 
-              <button class="btn" type="button" id="backStep1" aria-label="Voltar para etapa 1">
+              <button class="btn" type="button" id="backStep1" aria-label="Voltar">
                 ← Voltar
               </button>
-
-              <div class="toast" id="toast" role="status" aria-live="polite"></div>
             </div>
           </form>
         </div>
@@ -1287,15 +1322,15 @@
         <div class="card final">
           <h2>Menos tempo perdido. Mais previsibilidade.</h2>
           <p>Ative o teste grátis e use o VoltWay na sua rotina hoje.</p>
-          <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis no CTA final">Ativar teste grátis →</a>
+          <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis no final">Ativar teste grátis →</a>
           <div class="microcopy" style="margin-top:6px">
-            <span class="mini-icon" aria-hidden="true"></span> Feito para quem não pode “ficar na mão”
+            <span class="mini-icon" aria-hidden="true"></span> Feito para quem não pode ficar na mão
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 11. Rodapé essencial -->
+    <!-- 11. Rodapé -->
     <footer class="below">
       <div class="container">
         <div class="foot">
@@ -1303,41 +1338,49 @@
             <div class="logo" aria-hidden="true" style="width:30px;height:30px;border-radius:10px"></div>
             <div>
               <strong style="color:rgba(243,246,255,.9)">VoltWay</strong>
-              <div style="color:rgba(243,246,255,.55);font-size:12px">Landing page de campanha</div>
+              <div style="color:rgba(243,246,255,.55);font-size:12px">Recarga EV com previsibilidade</div>
             </div>
           </div>
 
           <div style="display:flex;gap:14px;flex-wrap:wrap">
-            <a href="#conversao" aria-label="Ir para o cadastro">Ativar teste grátis</a>
-            <a href="#privacy" aria-label="Ver política de privacidade (placeholder)">Política de Privacidade</a>
-            <a href="#terms" aria-label="Ver termos (placeholder)">Termos</a>
-            <a href="#contact" aria-label="Ver contato (placeholder)">Contato</a>
+            <a href="#conversao" aria-label="Ativar teste grátis">Ativar teste</a>
+            <a href="#" data-open="privacy" aria-label="Política de Privacidade">Privacidade</a>
+            <a href="#" data-open="terms" aria-label="Termos de Uso">Termos</a>
+            <a href="mailto:suporte@voltway.com" aria-label="Contato por e-mail">Contato</a>
           </div>
         </div>
 
         <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px">
           <small>© <span id="year"></span> VoltWay. Todos os direitos reservados.</small>
-          <small id="contact">Contato (placeholder): suporte@voltway.com</small>
-          <small id="privacy">Privacidade (placeholder): descreva como dados são usados e armazenados.</small>
-          <small id="terms">Termos (placeholder): condições do teste grátis e cobrança após o período.</small>
-          <small>CNPJ (placeholder): 00.000.000/0001-00</small>
+          <small>CNPJ: 00.000.000/0001-00</small>
         </div>
       </div>
     </footer>
   </main>
 
   <!-- Sticky CTA (mobile) -->
-  <div class="sticky" aria-label="Barra fixa de CTA">
+  <div class="sticky" aria-label="Barra fixa">
     <div class="container">
       <div class="wrap">
         <div class="copy">
           <b>Ative o teste grátis</b>
           <span>Recarga com previsibilidade</span>
         </div>
-        <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis (sticky)">
+        <a class="btn btn--primary" href="#conversao" aria-label="Ativar teste grátis (barra fixa)">
           Ativar →
         </a>
       </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Janela de conteúdo">
+    <div class="modal-card">
+      <div class="modal-head">
+        <b id="modalTitle">Conteúdo</b>
+        <button class="modal-close" type="button" id="modalClose" aria-label="Fechar">Fechar</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
@@ -1346,16 +1389,15 @@
       var y = document.getElementById("year");
       if (y) y.textContent = String(new Date().getFullYear());
 
+      // Form steps
       var step1 = document.getElementById("step1");
       var step2 = document.getElementById("step2");
       var pill1 = document.getElementById("pill1");
       var pill2 = document.getElementById("pill2");
       var go = document.getElementById("goStep2");
       var back = document.getElementById("backStep1");
-
       var email = document.getElementById("email");
       var form = document.getElementById("leadForm");
-      var toast = document.getElementById("toast");
       var lgpd = document.getElementById("lgpd");
 
       function setStep(n){
@@ -1364,7 +1406,7 @@
           step2.style.display = "none";
           pill1.classList.add("pill--active");
           pill2.classList.remove("pill--active");
-          email.focus();
+          if (email) email.focus();
         } else {
           step1.style.display = "none";
           step2.style.display = "block";
@@ -1377,7 +1419,7 @@
       if (go){
         go.addEventListener("click", function () {
           var v = (email && email.value || "").trim();
-          if (!v) { email.focus(); return; }
+          if (!v) { if (email) email.focus(); return; }
           setStep(2);
         }, { passive: true });
       }
@@ -1391,22 +1433,80 @@
       if (form){
         form.addEventListener("submit", function (e) {
           e.preventDefault();
-
           var v = (email && email.value || "").trim();
           if (!v) { setStep(1); return; }
           if (lgpd && !lgpd.checked) { lgpd.focus(); return; }
 
-          if (toast){
-            toast.style.display = "block";
-            toast.textContent = "Cadastro enviado! (Demonstração) — aqui você conectaria seu backend/CRM.";
+          alert("Cadastro enviado! Em produção, conecte aqui seu backend/CRM.");
+          form.reset();
+          setStep(1);
+        }, { passive: false });
+      }
+
+      // Modal content (Privacidade / Termos)
+      var modal = document.getElementById("modal");
+      var modalTitle = document.getElementById("modalTitle");
+      var modalBody = document.getElementById("modalBody");
+      var modalClose = document.getElementById("modalClose");
+      var lastFocus = null;
+
+      function openModal(title, html){
+        lastFocus = document.activeElement;
+        modalTitle.textContent = title;
+        modalBody.innerHTML = html;
+        modal.setAttribute("aria-hidden","false");
+        if (modalClose) modalClose.focus();
+      }
+      function closeModal(){
+        modal.setAttribute("aria-hidden","true");
+        modalBody.innerHTML = "";
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      document.addEventListener("click", function(e){
+        var t = e.target;
+        if (t && t.dataset && t.dataset.open){
+          e.preventDefault();
+          var key = t.dataset.open;
+
+          if (key === "privacy"){
+            openModal("Política de Privacidade", "" +
+              "<p>Respeitamos sua privacidade. Utilizamos seus dados apenas para fornecer o acesso ao VoltWay, suporte e comunicações relacionadas ao onboarding.</p>" +
+              "<h3>Quais dados coletamos</h3>" +
+              "<p>Dados básicos de contato e informações necessárias para ativação e uso do serviço.</p>" +
+              "<h3>Como usamos</h3>" +
+              "<p>Para criar sua conta, enviar o acesso ao teste, oferecer suporte e melhorar a experiência.</p>" +
+              "<h3>Seus direitos</h3>" +
+              "<p>Você pode solicitar atualização, exportação ou exclusão de dados conforme a legislação aplicável.</p>"
+            );
           }
 
-          setTimeout(function () {
-            form.reset();
-            if (toast) toast.style.display = "none";
-            setStep(1);
-          }, 1100);
-        }, { passive: false });
+          if (key === "terms"){
+            openModal("Termos de Uso", "" +
+              "<p>Ao usar o VoltWay, você concorda com os termos e condições do serviço.</p>" +
+              "<h3>Teste grátis</h3>" +
+              "<p>O teste grátis, quando disponível, permite experimentar o serviço. As condições podem variar conforme o plano e a região.</p>" +
+              "<h3>Assinatura e cancelamento</h3>" +
+              "<p>Você pode cancelar a qualquer momento. Em caso de cobrança, as regras e prazos são apresentados no momento da contratação.</p>" +
+              "<h3>Uso responsável</h3>" +
+              "<p>Você é responsável por manter suas credenciais seguras e por utilizar o app de forma adequada.</p>"
+            );
+          }
+        }
+
+        if (t === modal){
+          closeModal();
+        }
+      }, { passive: false });
+
+      document.addEventListener("keydown", function(e){
+        if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false"){
+          closeModal();
+        }
+      }, { passive: true });
+
+      if (modalClose){
+        modalClose.addEventListener("click", function(){ closeModal(); }, { passive: true });
       }
     })();
   </script>
